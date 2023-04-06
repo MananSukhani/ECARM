@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+  <body>
+    <div id="all">
+    <h1>Hamilton Depression Scale</h1>
+    <form id="form">
+      <div class="question">
+        <p>1. Depressed mood:</p>
+        <input type="radio" name="question1" value="0">none<br>
+        <input type="radio" name="question1" value="1">mild<br>
+        <input type="radio" name="question1" value="2">moderate<br>
+        <input type="radio" name="question1" value="3">severe<br>
+      </div>
+      <div class="question">
+        <p>2. Markedly diminished interest or pleasure:</p>
+        <input type="radio" name="question2" value="0">none<br>
+        <input type="radio" name="question2" value="1">mild<br>
+        <input type="radio" name="question2" value="2">moderate<br>
+        <input type="radio" name="question2" value="3">severe<br>
+      </div>
+      <div class="question">
+        <p>3. Significant weight loss when not dieting or weight gain:</p>
+        <input type="radio" name="question3" value="0">none<br>
+        <input type="radio" name="question3" value="1">mild<br>
+        <input type="radio" name="question3" value="2">moderate<br>
+        <input type="radio" name="question3" value="3">severe<br>
+      </div>
+      <div class="question">
+        <p>4. Insomnia or hypersomnia nearly every day:</p>
+        <input type="radio" name="question4" value="0">none<br>
+        <input type="radio" name="question4" value="1">mild<br>
+        <input type="radio" name="question4" value="2">moderate<br>
+        <input type="radio" name="question4" value="3">severe<br>
+      </div>
+      <div class="question">
+        <p>5. Psychomotor agitation or retardation nearly every day:</p>
+        <input type="radio" name="question5" value="0">none<br>
+        <input type="radio" name="question5" value="1">mild<br>
+        <input type="radio" name="question5" value="2">moderate<br>
+        <input type="radio" name="question5" value="3">severe<br>
+      </div>
+      <div class="question">
+        <p>6. Fatigue or loss of energy nearly every day:</p>
+        <input type="radio" name="question6" value="0">none<br>
+        <input type="radio" name="question6" value="1">mild<br>
+        <input type="radio" name="question6" value="2">moderate<br>
+        <input type="radio" name="question6" value="3">severe<br>
+      </div>
+      <div class="question">
+        <p>7. Feelings of worthlessness or excessive guilt:</p>
+        <input type="radio" name="question7" value="0">none<br>
+        <input type="radio" name="question7" value="1">mild<br>
+        <input type="radio" name="question7" value="2">moderate<br>
+        <input type="radio" name="question7" value="3">severe<br>
+      </div>
+      <div class="question">
+        <p>8. Diminished ability to think or concentrate:</p>
+        <input type="radio" name="question8" value="0">none<br>
+        <input type="radio" name="question8" value="1">mild<br>
+        <input type="radio" name="question8" value="2">moderate<br>
+        <input type="radio" name="question8" value="3">severe<br>
+      </div>
+      <div class="question">
+        <p>9. Thoughts of death or suicide:</p>
+        <input type="radio" name="question9" value="0">none<br>
+        <input type="radio" name="question9" value="1">mild<br>
+        <input type="radio" name="question9" value="2">moderate<br>
+        <input type="radio" name="question9" value="3">severe<br>
+      </div>
+      <div id="holder">
+        <button type="button" onclick="calculateScore()">Calculate Score</button>
+      </div>
+    </form>
+    <p id="result"></p>
+    <script src="index.js"></script>
+    <p id="cate"></p>
+    <div id="back">
+      <a href="../index.html">
+        <button>Go Back</button>
+      </a>
+    </div>
+    
+  </div>
+
+
+  </body>
+</html>

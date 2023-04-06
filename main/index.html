@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Emotion Tracker</title>
+</head>
+<body>
+    <div id="moodtracker"> 
+        <h1>Mood Tracker</h1> 
+        <p>Please answer the following questions about your current mood:</p> 
+        
+        <form> 
+            <div> 
+                <label>How happy are you feeling? </label> 
+                <select id="happy"> 
+                    <option>Very Happy</option> 
+                    <option>Happy</option> 
+                    <option>Okay</option> 
+                    <option>Sad</option> 
+                    <option>Very Sad</option> 
+                </select> 
+            </div> 
+            <div> 
+                <label>How energetic are you? </label> 
+                <select id="energetic"> 
+                    <option>Very Energetic</option> 
+                    <option>Energetic</option> 
+                    <option>Tired</option> 
+                    <option>Exhausted</option> 
+                    <option>Very Exhausted</option> 
+                </select> 
+            </div> 
+            <div> 
+                <label>How stressed are you? </label> 
+                <select id="stressed"> 
+                    <option>Very Stressed</option> 
+                    <option>Stressed</option> 
+                    <option>Okay</option> 
+                    <option>Calm</option> 
+                    <option>Very Calm</option> 
+                </select> 
+            </div> 
+            <button id="submit">Submit</button> 
+        </form> 
+        <div id="depbutton">
+            <a href="./dep/index1.html">
+                <button>Depression Test</button>
+            </a>
+        </div>
+    </div> 
+    
+    <div id="results"> 
+        <!-- recommendations will appear here --> 
+    </div> 
+    
+    <style> 
+    #moodtracker, #results { 
+        border: 1px solid black; 
+        padding: 10px; 
+    } 
+    
+    form div { 
+        margin-bottom: 10px; 
+    } 
+    </style> 
+    
+    <script> 
+    const happy = document.querySelector('#happy'); 
+    const energetic = document.querySelector('#energetic'); 
+    const stressed = document.querySelector('#stressed'); 
+    const submit = document.querySelector('#submit'); 
+    const results = document.querySelector('#results'); 
+    
+    submit.addEventListener('click', (e) => { 
+        e.preventDefault(); 
+        let mood = 'neutral'; 
+        if (happy.value === 'Very Happy' || happy.value === 'Happy') {
+            mood = 'happy'; 
+        } else if (happy.value === 'Sad' || happy.value === 'Very Sad') { 
+            mood = 'sad'; 
+        } 
+        if (energetic.value === 'Very Energetic' || energetic.value === 'Energetic') { 
+            mood = 'energetic'; 
+        } else if (energetic.value === 'Very Exhausted' || energetic.value === 'Exhausted') { 
+            mood = 'tired'; 
+        } 
+        if (stressed.value === 'Very Stressed' || stressed.value === 'Stressed') { 
+            mood = 'stressed'; 
+        } else if (stressed.value === 'Very Calm' || stressed.value === 'Calm') { 
+            mood = 'calm'; 
+        }
+    
+        results.innerHTML = `
+            <h2>Based on your mood, here are some recommendations for you:</h2>
+            <p>${mood === 'happy' ? 'Watch a funny comedy video or listen to uplifting music.' : 
+                mood === 'sad' ? 'Watch a emotional movie or listen to sad music. You can also journal your feelings.' : 
+                mood === 'energetic' ? 'Go for a walk outside or do some light exercise like yoga or stretching. Listen to upbeat music.' : 
+                mood === 'tired' ? 'Get some rest and relax. Read a book, take a nap or just unwind.' : 
+                mood === 'stressed' ? 'Do some relaxing breathing exercises or meditation. Spend time in nature.' : 
+                'Calm down and de-stress. Listen to calming music, read a book or do some light stretching.'} </p> 
+        `; 
+    }); 
+    </script>
+</body>
+</html> 
+
